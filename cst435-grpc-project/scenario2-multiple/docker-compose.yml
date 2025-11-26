@@ -1,0 +1,92 @@
+version: "3.9"
+
+services:
+  grpc-worker-1:
+    build: ./grpc
+    container_name: grpc-worker-1
+    ports:
+      - "50051:50051"
+
+  grpc-worker-2:
+    build: ./grpc
+    container_name: grpc-worker-2
+    ports:
+      - "50052:50051"
+
+  grpc-worker-3:
+    build: ./grpc
+    container_name: grpc-worker-3
+    ports:
+      - "50053:50051"
+
+  grpc-worker-4:
+    build: ./grpc
+    container_name: grpc-worker-4
+    ports:
+      - "50054:50051"
+
+  grpc-worker-5:
+    build: ./grpc
+    container_name: grpc-worker-5
+    ports:
+      - "50055:50051"
+
+  rest-worker-1:
+    build: ./rest
+    container_name: rest-worker-1
+    ports:
+      - "8001:8000"
+
+  rest-worker-2:
+    build: ./rest
+    container_name: rest-worker-2
+    ports:
+      - "8002:8000"
+
+  rest-worker-3:
+    build: ./rest
+    container_name: rest-worker-3
+    ports:
+      - "8003:8000"
+
+  rest-worker-4:
+    build: ./rest
+    container_name: rest-worker-4
+    ports:
+      - "8004:8000"
+
+  rest-worker-5:
+    build: ./rest
+    container_name: rest-worker-5
+    ports:
+      - "8005:8000"
+
+  xmlrpc-worker-1:
+    build: ./xmlrpc
+    container_name: xmlrpc-worker-1
+    ports:
+      - "9001:9000"
+
+  xmlrpc-worker-2:
+    build: ./xmlrpc
+    container_name: xmlrpc-worker-2
+    ports:
+      - "9002:9000"
+
+  xmlrpc-worker-3:
+    build: ./xmlrpc
+    container_name: xmlrpc-worker-3
+    ports:
+      - "9003:9000"
+
+  xmlrpc-worker-4:
+    build: ./xmlrpc
+    container_name: xmlrpc-worker-4
+    ports:
+      - "9004:9000"
+
+  xmlrpc-worker-5:
+    build: ./xmlrpc
+    container_name: xmlrpc-worker-5
+    ports:
+      - "9005:9000"

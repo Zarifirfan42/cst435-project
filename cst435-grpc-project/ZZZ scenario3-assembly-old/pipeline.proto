@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package pipeline;
+
+service PipelineService {
+  rpc ProcessChunk (ChunkRequest) returns (ChunkResponse);
+}
+
+message ChunkRequest {
+  repeated int32 numbers = 1;
+}
+
+message ChunkResponse {
+  repeated int32 numbers = 1;  // or final sum for svc5
+  int64 sum = 2;                // only used by svc5
+}

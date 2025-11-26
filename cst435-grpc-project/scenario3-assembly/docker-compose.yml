@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  svc1:
+    build: ./svc1_filter
+    ports:
+      - "50051:50051"
+    depends_on:
+      - svc2
+  svc2:
+    build: ./svc2_multiply
+    ports:
+      - "50052:50052"
+    depends_on:
+      - svc3
+  svc3:
+    build: ./svc3_square
+    ports:
+      - "50053:50053"
+    depends_on:
+      - svc4
+  svc4:
+    build: ./svc4_add
+    ports:
+      - "50054:50054"
+    depends_on:
+      - svc5
+  svc5:
+    build: ./svc5_sum
+    ports:
+      - "50055:50055"

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package compute;
+
+service ComputeService {
+  rpc SumSquares (SumSquaresRequest) returns (SumSquaresResponse);
+}
+
+message SumSquaresRequest {
+  repeated int32 numbers = 1;
+}
+
+message SumSquaresResponse {
+  int64 result = 1;
+}
